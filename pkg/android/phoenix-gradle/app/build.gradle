@@ -55,10 +55,12 @@ android {
         ra32 {
             java.srcDirs = ['../../phoenix/src']
             res.srcDirs = ['../../phoenix/res', '../../phoenix/libs/googleplay/res']
+            jniLibs.srcDirs = ['jniLibs']
         }
         ra64 {
             java.srcDirs = ['../../phoenix/src']
             res.srcDirs = ['../../phoenix64/res', '../../phoenix64/libs/googleplay/res']
+            jniLibs.srcDirs = ['jniLibs']
         }
     }
 }

@@ -15,6 +15,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 
+import java.io.File;
 import java.util.List;
 import java.util.ArrayList;
 import android.content.pm.PackageManager;
@@ -132,7 +133,7 @@ public final class MainMenuActivity extends PreferenceActivity
 		startRetroActivity(
 				retro,
 				null,
-				prefs.getString("libretro_path", getApplicationInfo().dataDir + "/cores/"),
+				getApplicationInfo().nativeLibraryDir + File.separator,
 				UserPreferences.getDefaultConfigPath(this),
 				Settings.Secure.getString(getContentResolver(), Settings.Secure.DEFAULT_INPUT_METHOD),
 				getApplicationInfo().dataDir,
